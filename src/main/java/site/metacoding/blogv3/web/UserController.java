@@ -1,13 +1,13 @@
-package site.metacoding.blogv3.test;
+package site.metacoding.blogv3.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class HelloController {
+public class UserController {
 
-    @GetMapping("/main")
-    public String main() {
+    @GetMapping({ "/loginForm" })
+    public String loginForm() {
         return "main";
     }
 }

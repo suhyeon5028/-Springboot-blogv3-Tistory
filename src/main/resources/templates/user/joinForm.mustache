@@ -4,10 +4,13 @@
     <div class="my_auth_box">
         <div class="my_auth_form_box">
             <div class="my_auth_form_box_title">글하다</div>
-            <form action="/join" method="post">
-                <input class="my_auth_form_box_input" type="text" name="username" placeholder="ID" maxlength="20" required />
-                <input class="my_auth_form_box_input" type="password" name="password" placeholder="Password" maxlength="20" required />
-                <input class="my_auth_form_box_input" type="password" name="" placeholder="Password Check" maxlength="20" required />
+            <div class="my_error_box my_hidden">
+                
+            </div>
+            <form action="/join" method="post" onsubmit="return validation()">
+                <input id="username" class="my_auth_form_box_input" type="text" name="username" placeholder="ID" maxlength="20" required />
+                <input id="password" class="my_auth_form_box_input" type="password" name="password" placeholder="Password" maxlength="20" required />
+                <input id="same-password" class="my_auth_form_box_input" type="password" name="" placeholder="Password Check" maxlength="20" required />
                 <input class="my_auth_form_box_input" type="email" name="email" placeholder="E-mail" maxlength="60" required />
                 <button type="submit" class="my_secondary_btn">회원가입</button>
             </form>
@@ -18,5 +21,7 @@
         </div>
     </div>
 </div>
+
+<script src="/js/joinForm.js"></script>
 
 {{>/layout/footer}}
